@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Student</title>
+
+<style>
+body{
+    font-family:'Segoe UI';
+    background:#BDD8E9;
+}
+
+.card{
+    background:white;
+    max-width:500px;
+    margin:60px auto;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#0A4174;
+    color:white;
+    border:none;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+
+<h2>Register Student</h2>
+
+<form method="POST" action="/register" enctype="multipart/form-data">
+<input name="reg_no" placeholder="Reg No" required>
+<input name="name" placeholder="Name" required>
+<input name="department" placeholder="Department" required>
+
+<!-- NEW HALL FIELD -->
+<input name="hall" placeholder="Hall Number" required>
+
+<input name="email" placeholder="Email" required>
+<input name="password" placeholder="Password" required>
+<input type="file" name="photo" required>
+
+<button type="submit">Register</button>
+</form>
+
+</div>
+</body>
+</html>

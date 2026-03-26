@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hall {{ hall_id }}</title>
+</head>
+<body>
+
+<h1>Hall {{ hall_id }}</h1>
+<h3>Staff: {{ staff_name }}</h3>
+
+<h2>Students in this hall</h2>
+
+<ul>
+{% for s in students %}
+    <li>{{ s[1] }} ({{ s[0] }}) - {{ s[2] }}</li>
+
+{% else %}
+    <li>No students in this hall</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</body>
+</html>

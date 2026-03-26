@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Students</title>
+
+<style>
+body{
+    font-family:'Segoe UI';
+    background:#BDD8E9;
+    padding:40px;
+}
+
+table{
+    width:100%;
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+th,td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Students List</h2>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Reg No</th>
+<th>Name</th>
+<th>Dept</th>
+<th>Hall</th>
+<th>Email</th>
+<th>Photo</th>
+</tr>
+
+{% for student in students %}
+<tr>
+<td>{{ student[0] }}</td>
+<td>{{ student[1] }}</td>
+<td>{{ student[2] }}</td>
+<td>{{ student[3] }}</td>
+<td>{{ student[4] }}</td>
+<td>{{ student[5] }}</td>
+<td>
+<img src="{{ url_for('static', filename='uploads/' + student[7]) }}" width="80">
+</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

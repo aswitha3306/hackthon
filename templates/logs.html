@@ -1,0 +1,10 @@
+<table border="1">
+<tr><th>Student</th><th>Activity</th><th>Time</th></tr>
+{% for l in logs %}
+<tr>
+<td>{{l[0]}}</td>
+<td>{{l[1]}}</td>
+<td>{{l[2]}}</td>
+</tr>
+{% endfor %}
+</table>

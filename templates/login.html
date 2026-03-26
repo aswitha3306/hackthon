@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controller Login | Exam Management</title>
+    <style>
+        /* CSS Variables based on your uploaded palette */
+        :root {
+            --deep-navy: #001D39;   /* Top color from image 2 */
+            --ocean-blue: #0A4174;  /* Second color from image 2 */
+            --steel-blue: #49769F;  /* Third color from image 2 */
+            --sky-soft: #BDD8E9;    /* Bottom color from image 2 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Gradient background using the palette spectrum */
+            background: linear-gradient(180deg, var(--ocean-blue) 0%, var(--deep-navy) 100%);
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .brand-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--sky-soft);
+            border-radius: 12px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            color: var(--deep-navy);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--steel-blue);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: var(--deep-navy);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--steel-blue);
+            background-color: #f8fbff;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: var(--ocean-blue);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .login-btn:hover {
+            background: var(--deep-navy);
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .footer-links a {
+            color: var(--steel-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--ocean-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="brand-icon">EM</div>
+        <h2>Controller Login</h2>
+        <p>Exam Hall Malpractice Detection</p>
+        
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label>Admin Username</label>
+                <input type="text"name="username" placeholder="e.g. admin_01" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+            
+            <button href ="/templates/dashboard.html" type="submit" class="login-btn">Sign In to Dashboard</button>
+        </form>
+
+        <div class="footer-links">
+            <a href="#">Forgot Credentials?</a>
+        </div>
+    </div>
+
+</body>
+</html>
