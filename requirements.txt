@@ -1,6 +1,6 @@
 flask
 ultralytics
-opencv-python
+opencv-python-headless
 numpy
 gunicorn
 mysql-connector-python

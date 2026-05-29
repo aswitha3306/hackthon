@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, Response, send_from
 import mysql.connector
 import os
 from werkzeug.utils import secure_filename
-import face_recognition
+#import face_recognition
 import numpy as np
 import cv2
 from datetime import datetime
@@ -80,14 +80,14 @@ def load_faces():
         except:
             pass
 
-load_faces()
+#load_faces()
 
 # =========================
 # YOLO
 # =========================
 model = YOLO("yolov8n.pt")
 
-camera = cv2.VideoCapture(0)
+#camera = cv2.VideoCapture(0)
 
 # =========================
 # Voice System
@@ -381,10 +381,10 @@ def register():
     return render_template('register.html')
 
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen_frames(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
+#@app.route('/video_feed')
+#def video_feed():
+#   return Response(gen_frames(),
+#                  mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 # =========================
